@@ -17,6 +17,11 @@ public class Professor extends Pessoa {
 
     }
 
+    @Override
+    public void fazAniversario () {
+        super.fazAniversario();
+        super.fazAniversario();
+    }
     //
     @Override
     public String toString () {

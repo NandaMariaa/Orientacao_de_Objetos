@@ -7,6 +7,7 @@ public class exemplo3 {
         Pessoa p1 = new Pessoa ("João",30, true);
         Professor pr1 = new Professor("Poo", 5000, "Luiz", 32, false);
         Aluno a1 = new Aluno("Ti", 200, "Maria", 18, false);
+        Aluno a2 = new AlunoBolsista("AOT", 0, "Pedro", 20, false);
 
         System.out.println(p1);
 
@@ -23,6 +24,10 @@ public class exemplo3 {
         System.out.println(a1);
         a1.fazMatricula();
         a1.pagaMensalidade();
+
+        System.out.println(a2);
+        a2.pagaMensalidade();
+        
         
     }
     

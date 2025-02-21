@@ -17,17 +17,16 @@ public class Professor extends Pessoa {
 
     }
 
-
     //
     @Override
     public String toString () {
         return "Professor - " +
          " / Área: " + this.area +
          " / Salário: R$ " + this.salario + "0,00" +
-         super.toString();
-
+        super.toString();
 
     }
+    
     //construtor
     public Professor(String area, float salario, String nome, int idade, boolean matriculaAtiva) {
         super (nome, idade, matriculaAtiva);

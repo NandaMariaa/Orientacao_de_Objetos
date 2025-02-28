@@ -1,19 +1,22 @@
 package ex4;
 
-public class ProdutoP {
+public class ProdutoP extends Produto {
 
     private int dia;
     private int validade;
-
-
-
-
 
 
     private boolean isValido () {
         return validade > dia;
     }
 
+    public void mostraValidade () {
+        if ( isValido() ) {
+            System.out.println(getNome() + " - Produto dentro da validade.");
+        } else {
+            System.out.println(getNome() + " - Produto vencido");
+        }
+    }
 
     //construtor
     public ProdutoP(int dia, int validade, String nome, double preço, int id, int qnt) {
@@ -35,6 +38,5 @@ public class ProdutoP {
     public void setValidade(int validade) {
         this.validade = validade;
     }
-    
     
 }

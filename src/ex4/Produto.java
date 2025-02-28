@@ -10,6 +10,16 @@ public class Produto {
 
 
     @Override
+    public double getValorTotal() {
+        if ( isValido() ) {
+            return super.getValorTotal();
+
+        } else {
+            return 0;
+        }
+
+    }
+    @Override
     public String toString() {
         return nome + " - " + 
         qnt + " x R$ " + 

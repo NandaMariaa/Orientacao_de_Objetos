@@ -1,6 +1,6 @@
 package ex4;
 
-public class ProdutoP extends Produto {
+public class ProdutoPerecivel extends Produto {
 
     private int dia;
     private int validade;
@@ -19,7 +19,7 @@ public class ProdutoP extends Produto {
     }
 
     //construtor
-    public ProdutoP(int dia, int validade, String nome, double preço, int id, int qnt) {
+    public ProdutoPerecivel(int dia, int validade, String nome, double preço, int id, int qnt) {
         super(nome, preço, id, qnt);
         this.dia = dia;
         this.validade = validade;

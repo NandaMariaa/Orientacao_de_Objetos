@@ -4,22 +4,20 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Produto p1 = new Produto("leite", 9.90, 1, 2);
+        Produto leite = new ProdutoPerecivel( 7, 10, "Leite", 9.90, 25445, 3 );
+        Caixa c2 = new Caixa( leite );
+        c2.mostraValor();
+        c2.fazCompra();
         
-        Caixa c1 = new Caixa (p1);
-        c1.mostraValor();
-        c1.fazCompra();
-        
-
-        Produto p2 = new ProdutoP(7, 10, "Leite", 9.90,2, 2);
-        Caixa c2 = new Caixa(leite);
-
-        
+        //--Casting
+        ProdutoPerecivel leite2 = (ProdutoPerecivel) leite;
+        ControleDeEstoque ce = new ControleDeEstoque( leite2 );
         ce.verificaEstoque();
-
-        ProdutoP leite2 = (ProdutoP) leite;
-        ControleEstq ce = new ControleEstq(leite2);
-        ce.verificaEstoque();
+        
+        Produto macarrao = new Produto( "Macarrao", 5.00, 5555, 2 );
+        Caixa c3 = new Caixa( macarrao );
+        c3.mostraValor();
+        c3.fazCompra();
     }
     
 }

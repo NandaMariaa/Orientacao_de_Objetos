@@ -7,36 +7,28 @@ public class Produto {
     private int id;
     private int qnt;
 
-
-
-    @Override
-    public double getValorTotal() {
-        if ( isValido() ) {
-            return super.getValorTotal();
-
-        } else {
-            return 0;
-        }
-
-    }
-    @Override
-    public String toString() {
-        return nome + " - " + 
-        qnt + " x R$ " + 
-        String.format("%.2f",preço) + " = R$" +
-        String.format("%.2f",getValorTotal());
-    }
-
-    public double getValorTotal () {
-        return preço * qnt;
-    }
-
-    //contrutor
-    public Produto(String nome, double preço, int id, int qnt) {
+     //contrutor
+     
+        public Produto(String nome, double preço, int id, int qnt) {
         this.nome = nome;
         this.preço = preço;
         this.id = id;
         this.qnt = qnt;
+    }
+
+    @Override
+
+    public String toString() {
+        return nome + " - " + 
+                qnt + " x R$" + 
+                String.format("%.2f",preço) + " = R$" + 
+                String.format("%.2f",getValorTotal());
+    }
+    
+    //pegar valor total
+
+    public double getValorTotal(){
+        return preço * qnt;
     }
 
     //getters e setters

@@ -1,12 +1,11 @@
 package ex4;
 
-public class ControleEstq extends ProdutoP {
+public class ControleDeEstoque {
 
-    ProdutoP produtoP;
+    private ProdutoPerecivel produtoP;
 
-    ControleEstq (ProdutoP produtoP) {
+    ControleDeEstoque (ProdutoPerecivel produtoP) {
         this.produtoP = produtoP;
-
     }
 
     public void verificaEstoque () {
